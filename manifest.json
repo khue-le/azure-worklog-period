@@ -1,0 +1,24 @@
+{
+  "name": "AZ Period",
+  "version": "0.1",
+  "description": "AZ Period Work Log",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://dev.azure.com/*", "https://*.timehub.7pace.com/*"],
+      "all_frames": true,
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "manifest_version": 2
+}
